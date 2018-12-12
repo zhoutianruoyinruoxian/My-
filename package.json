@@ -1,19 +1,22 @@
 {
   "name": "redux-small",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "easy usage for the redux or react-redux",
   "main": "./lib/index.js",
-  "scripts": {
-    "build": "babel src --out-dir lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "react",
     "redux",
     "react-redux"
   ],
   "author": "zerg-zt",
+  "repository": "https://github.com/zhoutianruoyinruoxian/redux-small",
+  "homepage": "https://github.com/zhoutianruoyinruoxian/redux-small",
+  "bugs": "https://github.com/zhoutianruoyinruoxian/redux-small/issues",
   "license": "ISC",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@babel/runtime": "^7.2.0",
