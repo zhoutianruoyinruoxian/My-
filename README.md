@@ -1,0 +1,2 @@
+redux-simple
+此组件为redux的封装，是redux更加易于使用
