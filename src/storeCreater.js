@@ -10,6 +10,9 @@ const defaultOption = {
 };
 
 const storeCreater = (modules, option = defaultOption) => {
+  
+  // 最好是在这里对modules做一次深拷贝
+
   if (!modules || Object.prototype.toString.call(modules) !== '[object Object]') {
     throw new Error('parameter modules is required but not found!');
   }
