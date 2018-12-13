@@ -3,6 +3,8 @@ redux-small
 
 This package makes redux easier to use,it looks like vuex
 
+[中文文档请看这里](https://blog.csdn.net/xiaotiantian1993s/article/details/84984245)
+
 ## Installation
 
 To install redux-small,use npm
