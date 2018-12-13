@@ -1,7 +1,7 @@
 redux-small
 =========================
 
-This package makes redux easier to use
+This package makes redux easier to use,it looks like vuex
 
 ## Installation
 
@@ -15,7 +15,9 @@ npm install --save redux-small
 **storeCreater(modules,option)**
 
 The only exposed method;
+
 **modules:** (object) an object formed in the project;
+
 **option:** (object) configuration parameter;
 ```
   option: {
@@ -43,6 +45,14 @@ export default {
   },
 };
 ```
+description:
+
+  state: initialState in your store;
+
+  mutations: function change the state, just like reducer,it supports sync function and async function;
+
+
+your modules output file:
 
 redux/modules/index.js
 ```
@@ -79,6 +89,7 @@ ReactDOM.render(
 ```
 
 your react component file:
+
 demo.js
 ```
 
