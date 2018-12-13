@@ -1,6 +1,6 @@
 {
   "name": "redux-small",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "easy usage for the redux or react-redux",
   "main": "./lib/index.js",
   "keywords": [
