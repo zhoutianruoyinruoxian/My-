@@ -3,3 +3,4 @@ src
 .editorconfig
 babel.config.js
 yarn.lock
+package-lock.json
