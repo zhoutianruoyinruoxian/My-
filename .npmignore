@@ -1,6 +1,14 @@
 .history
+.DS_Store
 src
+test
+
+#config file
 .editorconfig
 babel.config.js
+karma.conf.js
+.eslintrc.js
+
+
 yarn.lock
 package-lock.json
