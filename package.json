@@ -10,8 +10,6 @@
   ],
   "author": "zerg-zt",
   "repository": "https://github.com/zhoutianruoyinruoxian/redux-small",
-  "homepage": "https://github.com/zhoutianruoyinruoxian/redux-small",
-  "bugs": "https://github.com/zhoutianruoyinruoxian/redux-small/issues",
   "license": "ISC",
   "scripts": {
     "build": "babel src --out-dir lib",
