@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./srcTs",
+    "declaration": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    // "isolatedModules": true,
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "node"
+    ]
+  }
+}

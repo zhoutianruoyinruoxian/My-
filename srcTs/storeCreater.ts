@@ -1,0 +1,37 @@
+import { createStore, applyMiddleware } from 'redux';
+import reducerCreater from './reducerCreater';
+import mutationCreater from './mutationCreater';
+import logger from './logger';
+import { Modules } from './type';
+
+
+
+const defaultOption: any = {
+  logger: false,
+  middleware: [],
+};
+
+const storeCreater = (modules: Modules, option = defaultOption) => {
+
+  // 最好是在这里对modules做一次深拷贝
+
+  if (!modules || Object.prototype.toString.call(modules) !== '[object Object]') {
+    throw new Error('parameter modules is required but not found!');
+  }
+  let middleware = [];
+
+  if (option.logger && logger) {
+    middleware = [...defaultOption.middleware, logger];
+  }
+
+  const reducers = reducerCreater(modules);
+  const store = createStore(reducers, applyMiddleware(...middleware));
+  const mapMutations = mutationCreater(store, modules);
+  return {
+    store,
+    mapMutations,
+    reducers,
+  };
+};
+
+export default storeCreater;

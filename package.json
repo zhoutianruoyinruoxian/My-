@@ -13,11 +13,13 @@
   "license": "ISC",
   "scripts": {
     "build": "babel src --out-dir lib",
+    "build:ts": "tsc -P tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
     "@babel/polyfill": "^7.0.0",
     "@babel/runtime": "^7.2.0",
+    "@types/node": "^11.9.4",
     "redux": "^4.0.1"
   },
   "devDependencies": {
@@ -26,5 +28,9 @@
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.0"
+  },
+  "dependencies": {
+    "@types/node": "^11.9.4",
+    "redux": "^4.0.1"
   }
 }
