@@ -6,7 +6,7 @@
     "outDir": "./dist",
     "rootDir": "./srcTs",
     "declaration": true,
-    "declarationDir": "./lib1",
+    "declarationDir": "./lib",
     "sourceMap": true,
     "noImplicitAny": true,
     // "isolatedModules": true,

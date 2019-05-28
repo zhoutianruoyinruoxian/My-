@@ -1,4 +1,4 @@
-import { Modules, Type, MapMutations, BaseObject } from './type';
+import { Modules, ReducerName, Type, MapMutations, BaseObject } from './type';
 import { Store, Dispatch } from 'redux';
 
 
@@ -10,7 +10,7 @@ const mutationCreater = ({ dispatch, getState }: Store, modules: Modules) => {
     mutationList[o] = {};
     Object.keys(mutations).forEach(m => {
       mutationList[o][m] = (...args) => {
-        const setState = _dispatch(dispatch, _module.type);
+        const setState = _dispatch(dispatch, _module.reducerName, m);
         mutations[m](setState, getState, ...args);
       };
     });
@@ -18,8 +18,8 @@ const mutationCreater = ({ dispatch, getState }: Store, modules: Modules) => {
   return mutationList;
 };
 
-const _dispatch = (dispatch: Dispatch, type: Type) => (data: BaseObject) => dispatch(actionCreater(type, data));
+const _dispatch = (dispatch: Dispatch, reducerName: ReducerName, type: Type) => (data: BaseObject) => dispatch(actionCreater(reducerName, type, data));
 
-const actionCreater = (type: Type, data: BaseObject) => ({ type, data });
+const actionCreater = (reducerName: ReducerName, type: Type, data: BaseObject) => ({ reducerName, type, data });
 
 export default mutationCreater;

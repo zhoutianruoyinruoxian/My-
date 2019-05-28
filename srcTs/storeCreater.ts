@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import reducerCreater from './reducerCreater';
 import mutationCreater from './mutationCreater';
 import logger from './logger';
@@ -10,6 +10,8 @@ const defaultOption: any = {
   logger: false,
   middleware: [],
 };
+
+const composeEnhancer = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const storeCreater = (modules: Modules, option = defaultOption) => {
 
@@ -25,7 +27,7 @@ const storeCreater = (modules: Modules, option = defaultOption) => {
   }
 
   const reducers = reducerCreater(modules);
-  const store = createStore(reducers, applyMiddleware(...middleware));
+  const store = createStore(reducers, composeEnhancer(applyMiddleware(...middleware)));
   const mapMutations = mutationCreater(store, modules);
   return {
     store,

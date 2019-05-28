@@ -17,16 +17,24 @@ export interface Module {
   };
 }
 
+
 export interface ModuleItem extends Module {
-  type?: Type;
+  reducerName?: ReducerName;
 }
 
 export interface Modules {
   [props: string]: ModuleItem;
 }
 
+export interface Action {
+  type?: Type;
+  reducerName?: ReducerName;
+  data?: object;
 
-export type Type = symbol;
+}
+
+export type ReducerName = string;
+export type Type = string;
 
 export interface Reducers {
   [props: string]: (state: BaseObject, action: BaseObject) => any;

@@ -12,7 +12,7 @@
   "repository": "https://github.com/zhoutianruoyinruoxian/redux-small",
   "license": "ISC",
   "scripts": {
-    "build": "babel srcTs --extensions .ts --out-dir lib1",
+    "build": "babel srcTs --extensions .ts --out-dir lib",
     "tsc": "tsc --alwaysStrict --outDir dist ",
     "pub": "npm run build && npm run tsc",
     "build:ts": "tsc -P tsconfig.json",

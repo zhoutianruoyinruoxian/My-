@@ -1,6 +1,7 @@
 .history
 .DS_Store
 src
+dist
 test
 
 #config file
