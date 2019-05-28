@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
     "module": "es6",
     "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./srcTs",
     "declaration": true,
+    "declarationDir": "./lib1",
     "sourceMap": true,
     "noImplicitAny": true,
     // "isolatedModules": true,

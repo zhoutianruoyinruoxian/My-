@@ -14,6 +14,9 @@ module.exports = {
         // modules: 'cjs',
         useBuiltIns: "usage",
       }
+    ],
+    [
+      "@babel/preset-typescript"
     ]
   ],
   plugins: [
